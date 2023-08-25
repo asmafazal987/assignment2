@@ -5,7 +5,7 @@ class Assignment2_Module:
     def list_to_dict(self):
         li1 = [int(x) for x in input("Enter your list of integers separated by spaces: ").split()]
         li2 = input("Enter your list of strings separated by spaces: ").split()
-
+        print("hello")
         d = {}
         for i in range(len(li1)):
             d[li1[i]] = li2[i]
