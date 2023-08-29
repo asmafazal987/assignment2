@@ -1,3 +1,6 @@
+from typing import Self
+
+
 class Assignment2_Module:
 
 
@@ -113,8 +116,66 @@ class Assignment2_Module:
                     input_list[i], input_list[j] = input_list[j], input_list[i]
         return input_list
     
+    # Question no 12
+    # Single inheritence
+
+    class Parent:
+        def func1(self):
+            print("This function is in parent class")
+        
+    class Child(Parent):
+        def func2(self):
+            print("This function is child class")
     
     
+    # Question no 13
+    # Multiple inheritence
+    class Ami:
+        def Ami(self):
+            self.ami_name = input("Enter your Mother name : ")
+
+    class Abu:
+        def Abu(self):
+            self.abu_name = input("Enter your Father name : ")
+        
+    class Beta(Ami,Abu):
+        def beta(self):
+            self.beta_name = input("Enter your son name : ")
+            self.Ami()
+            self.Abu()
+            print(f"{self.beta_name}'s Mother name: {self.ami_name} and father name: {self.abu_name}")
+
+    # Question no 14
+    # Multilevel Inheritance
+    class Grandfather:
+        def grandfather(self):
+            self.grandfather_name = input("Enter your GrandFather name")
+            
+
+    class Father(Grandfather):
+        def father(self):
+            self.father_name = input("Enter your Father name")
+            self.grandfather()
+
+    class Son(Father):
+        def son(self):
+            self.son_name = input("Enter your Son name")
+            self.father()
+            print(f"Grandfather: {self.grandfather_name}, Father: {self.father_name}, Son: {self.son_name}")
+
+    # Question no 15
+    # Hierarchical Inheritance
+    class Parent:
+        def function1(self):
+            print("This function is in parent class")
+
+    class Child1(Parent):
+        def function2(self):
+            print("This function is in child 1 class")
+
+    class Child2(Parent):
+        def function3(self):
+            print("This function is in child 2 class")
 
 
     
