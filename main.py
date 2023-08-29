@@ -2,6 +2,7 @@ from Assignment2_Module import Assignment2_Module
 
 def main():
     obj = Assignment2_Module()
+    
 
     while True:
 
@@ -17,9 +18,13 @@ def main():
         print('Enter 9 to sort a list numbers in asscending order ')
         print('Enter 10 to sort a list of alphabets or strings in asscending order ')
         print('Enter 11 to sort a list of strings and integers in asscending order ')
-        print('Enter 12 to Exit')
+        print("Enter 12 to check how single inheritance works")
+        print("Enter 13 to check how multiple inheritance works")
+        print("Enter 14 to check how multilevel inheritance works")
+        print("Enter 15 to check how herarchical inheritance works")
+        print('Enter 16 to Exit')
         
-        ques = int(input('Enter the question number (1 to 12): '))
+        ques = int(input('Enter the question number (1 to 16): '))
         if ques == 1 :
             result = obj.list_to_dict()
             print(result)
@@ -54,6 +59,23 @@ def main():
             result = obj.sort_alphanumeric_list()
             print(result)
         elif ques == 12:
+            object = obj.Child()
+            object.func1()
+            object.func2()
+        elif ques == 13:
+            s1 = obj.Beta()
+            s1.beta()
+        elif ques == 14:
+            v1 = obj.Son()
+            v1.son()
+        elif ques == 15:
+            object1 = obj.Child1()
+            object2 = obj.Child2()
+            object1.function1()
+            object1.function2()
+            object2.function1()
+            object2.function3()
+        elif ques == 16:
             break
         else:
             print("Invalid question number.")
